@@ -1,0 +1,57 @@
+curso git
+Resumo da Aula
+
+Nesta aula, você aprendeu como conectar um repositório local (no seu computador) com um repositório remoto (no GitHub). O processo envolve configurar o Git com suas informações pessoais, adicionar seus arquivos, criar um commit inicial e estabelecer a conexão segura com o GitHub através de uma chave SSH.
+
+Os principais conceitos abordados foram: a diferença entre repositório local e remoto, a importância da autenticação via SSH para segurança, e como sincronizar seus projetos entre o computador e a plataforma GitHub.
+
+Passo a Passo Completo para Novos Projetos
+
+Aqui está um guia prático que você pode usar sempre que iniciar um novo projeto:
+
+1. Criar repositório no GitHub
+Acesse github.com, faça login e clique em "New repository". Escolha um nome para seu projeto e clique em "Create repository". Copie a URL SSH que aparece.
+
+2. Inicializar repositório local
+Abra o terminal na pasta do seu projeto e execute:
+git init
+
+3. Configurar identidade no Git (primeira vez apenas)
+Se for a primeira vez usando Git neste computador, configure seu e-mail e nome:
+git config --global user.email "seu.email@example.com"
+git config --global user.name "Seu Nome"
+
+Substitua pelos dados da sua conta GitHub.
+
+4. Adicionar arquivos
+Para adicionar todos os arquivos do projeto de uma vez:
+git add .
+
+5. Criar commit inicial
+git commit -m "projeto inicial"
+
+Você pode alterar a mensagem conforme necessário.
+
+6. Renomear branch para main
+git branch -M main
+
+7. Conectar repositório local ao remoto
+git remote add origin git@github.com:seu-usuario/seu-projeto.git
+
+Substitua pela URL SSH que você copiou do GitHub.
+
+8. Gerar chave SSH (primeira vez apenas)
+Se for a primeira vez, o Git pedirá autenticação. Gere uma chave SSH com:
+ssh-keygen -t ed25519 -C "seu.email@example.com"
+
+Pressione Enter para aceitar o local padrão e deixe a senha vazia (pressione Enter duas vezes).
+
+9. Adicionar chave SSH no GitHub
+Abra a pasta .ssh no seu computador (geralmente em C:\Users\SeuUsuario\.ssh no Windows). Abra o arquivo id_ed25519.pub com um editor de texto, copie todo o conteúdo. No GitHub, vá em Settings > SSH and GPG keys > New SSH key, cole a chave e salve.
+
+10. Sincronizar com GitHub
+git push -u origin main
+
+Pronto! Seu projeto está sincronizado. Você pode compartilhar a URL do repositório com outras pessoas.
+
+Dica importante: Os passos 3, 8 e 9 você faz apenas uma vez no seu computador. Nos próximos projetos, comece direto do passo 1 e pule para o passo 4.
