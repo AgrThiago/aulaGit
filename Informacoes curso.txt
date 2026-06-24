@@ -116,4 +116,18 @@ git remote rename apelido novo_apelido
 ## 💡 Dica importante
 O "origin" é o nome padrão para o repositório principal no GitHub, mas você pode usar outros nomes se necessário!
 
-Tem alguma dúvida sobre esses comandos? 😊
+Principais comandos usados:
+
+git pull origin main - Baixa os novos commits do repositório remoto (origin) para a branch main do seu repositório local.
+
+git log - Verifica os commits que agora estão no repositório local, mostrando autor, data e mensagem de cada um.
+
+O fluxo de trabalho completo:
+
+A aula também reforçou o ciclo de trabalho colaborativo que você aprendeu até agora:
+
+git status - Verifica quais arquivos foram modificados
+git add - Adiciona as mudanças para o commit
+git commit - Registra as mudanças com uma mensagem
+git push - Envia os commits para o GitHub
+git pull - Baixa os commits que outras pessoas enviaram
