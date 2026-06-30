@@ -84,5 +84,5 @@ function botaoFatorial() {
         console.log(`Fatorial ${fatorial}x ${i} `)
     }
 
-    alert(`Fatorial de ${numero} = ${fatorial}`);
+    alert(`Fatorial de ${numero} = ${fatorial}.`);
 }
